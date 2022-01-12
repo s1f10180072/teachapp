@@ -1,0 +1,193 @@
+#title {
+    text-align: center;
+  }
+  
+.menu-btn {
+position: fixed;
+top: 10px;
+right: 10px;
+display: flex;
+height: 60px;
+width: 60px;
+justify-content: center;
+align-items: center;
+z-index: 90;
+background-color: #3584bb;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+content: '';
+display: block;
+height: 3px;
+width: 25px;
+border-radius: 3px;
+background-color: #ffffff;
+position: absolute;
+}
+.menu-btn span:before {
+bottom: 8px;
+}
+.menu-btn span:after {
+top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+bottom: 0;
+transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+top: 0;
+transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+.menu-content {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 100%;/*leftの値を変更してメニューを画面外へ*/
+z-index: 80;
+background-color: #3584bb;
+transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+left: 70%;/*メニューを画面内へ*/
+}
+  
+h2 {
+    
+    font-family: sans-serif;
+    font-stretch: condensed;
+    font-weight: bold;
+}
+
+label {
+font-family: sans-serif;
+font-stretch: condensed;
+font-weight: bold;
+}
+
+.chkbox input[type=checkbox] {
+    align-items: center;
+    margin: 0px 8px 0 0;
+}
+
+
+  
+
+  /* .chkbox {
+      margin:			0 0 10px 20px;
+  } */
+  /* ラベルのスタイル　*/
+  /* .chkbox label {
+      padding-left:		38px;			/* ラベルの位置 */
+      /* font-size:		32px;
+      line-height:		32px;
+      display:		inline-block;
+      cursor:			pointer;
+      position:		relative;
+  }   */
+  
+  /* ボックスのスタイル */
+  /* .chkbox label:before {
+      content:		'';
+      width:			32px;			/* ボックスの横幅 */
+      /* height:			32px;			ボックスの縦幅 */
+      /* display:		inline-block;
+      position:		absolute;
+      left:			0;
+      background-color:	#fff;
+      box-shadow:		inset 1px 2px 3px 0px #000;
+      border-radius:		6px 6px 6px 6px;
+  }  */
+  /* 元のチェックボックスを表示しない */
+  /* .chkbox input[type=checkbox] {
+      display:		none;
+  } */
+  /* チェックした時のスタイル */
+  /* .chkbox input[type=checkbox]:checked + label:before { */
+      /* content:		'\2713';		チェックの文字  */
+      /* font-size:		34px;			チェックのサイズ */
+      /* color:			#fff;			チェックの色 */
+      /* background-color:	#06f;			チェックした時の色 */
+  /* }  */
+
+/* 言語選択画面での囲い */
+fieldset {
+    display: inline-block;
+}
+
+/* 働きたい場所について */
+#local li{
+    display: inline;
+}
+
+/* 給与設定について */
+#salary {
+    display: inline-flex;
+}
+
+/* 転勤の有無について */
+.transfer_horizon + .transfer_horizon {
+    margin-left: 20px;
+}
+
+/* テレワークの有無について */
+.telework_horizon + .telework_horizon {
+    margin-left: 20px;
+}
+
+/* 福利厚生について */
+#hukuri li{
+    display: inline;
+}
+
+#rs {
+    text-align: center;
+}
+
+#register {
+    text-align: center;
+}

@@ -1,0 +1,34 @@
+.home-course{
+    display: flex;
+    flex-flow: column;
+}
+
+.home-course li{
+    flex: 1 1 auto;
+    margin: 0 2px 4px 2px;
+    border: solid 5px #fff;
+    list-style-type: none;
+    background: #fff;
+}
+
+@media screen and (min-width:768px) {
+    .home-course{
+        flex-flow: row;
+    }
+}    
+
+.home-course a{
+    color: #393939;
+    text-decoration: none;
+
+}
+
+p.img_center{
+    text-align:center;
+}
+
+
+.how {
+	text-align: left;
+	display: inline-block;
+}
